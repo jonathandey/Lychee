@@ -34,6 +34,7 @@ $config = "<?php
 
 // Database configuration
 \$dbHost = '$host'; // Host of the database
+\$dbPort = null; // Host of the database
 \$dbUser = '$user'; // Username of the database
 \$dbPassword = '$password'; // Password of the database
 \$dbName = '$name'; // Database name
@@ -66,6 +67,7 @@ $config = "<?php
 
 		return(array(
 			'host'     => $dbHost,
+			'port'     => $dbPort,
 			'user'     => $dbUser,
 			'password' => $dbPassword,
 			'name'     => $dbName,

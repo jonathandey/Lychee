@@ -66,7 +66,7 @@ if (!file_exists(LYCHEE_CONFIG_FILE)) exit('Error: Configuration not found. Plea
 require(LYCHEE_CONFIG_FILE);
 
 // Database
-$database = new Mysqli($dbHost, $dbUser, $dbPassword, $dbName);
+$database = new Mysqli($dbHost, $dbUser, $dbPassword, $dbName, $dbPort);
 if (mysqli_connect_errno()!=0) $error .= ('Error: ' . mysqli_connect_errno() . ': ' . mysqli_connect_error() . '' . PHP_EOL);
 
 // Config
