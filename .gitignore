@@ -3,6 +3,9 @@ src/bower_components/
 
 data/config.php
 
+php/vendor/
+php/composer.lock
+
 uploads/big/*
 uploads/import/*
 uploads/medium/*

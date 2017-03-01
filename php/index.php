@@ -1,5 +1,6 @@
 <?php
 
+require(__DIR__ . '/vendor/autoload.php');
 /**
  * @author    Tobias Reich
  * @copyright 2016 by Tobias Reich
@@ -7,6 +8,7 @@
 
 namespace Lychee;
 
+use Lychee\Modules\Log;
 use Lychee\Modules\Config;
 use Lychee\Modules\Response;
 use Lychee\Modules\Settings;
@@ -15,6 +17,8 @@ use Lychee\Modules\Validator;
 use Lychee\Access\Installation;
 use Lychee\Access\Admin;
 use Lychee\Access\Guest;
+
+use Symfony\Component\HttpFoundation\Request;
 
 require(__DIR__ . '/define.php');
 require(__DIR__ . '/autoload.php');
@@ -28,9 +32,11 @@ require(__DIR__ . '/helpers/getHashedString.php');
 require(__DIR__ . '/helpers/hasPermissions.php');
 require(__DIR__ . '/helpers/search.php');
 
+$request = Request::createFromGlobals();
+
 // Define the called function
-if (isset($_POST['function']))     $fn = $_POST['function'];
-else if (isset($_GET['function'])) $fn = $_GET['function'];
+if ($request->request->has('function'))     $fn = $request->request->get('function');
+else if ($request->query->has('function')) $fn = $request->query->get('function');
 else                               $fn = null;
 
 // Check if a function has been specified
