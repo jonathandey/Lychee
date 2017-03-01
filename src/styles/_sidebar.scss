@@ -5,7 +5,8 @@
 	right: -360px;
 	width: 350px;
 	height: calc(100% - 50px);
-	background-color: rgba(25, 25, 25, .98);
+	// background-color: rgba(25, 25, 25, .98);
+	background-color: #142b3e;
 	border-left: 1px solid black(.2);
 	transform: translateX(0);
 	transition: transform .3s $timing;

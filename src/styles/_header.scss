@@ -3,8 +3,9 @@
 	position: fixed;
 	height: 49px;
 	width: 100%;
-	background: linear-gradient(to bottom, #222222, #1a1a1a);
-	border-bottom: 1px solid #0f0f0f;
+	// background: linear-gradient(to bottom, #222222, #1a1a1a);
+	background: #5ea1d4;
+	border-bottom: 1px solid #5ea1d4;
 	z-index: 1;
 	transition: transform .3s ease-out;
 
@@ -112,7 +113,7 @@
 		width: 80px;
 		margin: 0;
 		padding: 5px 12px 6px 12px;
-		background-color: #1d1d1d;
+		background-color: #142b3e;
 		color: #fff;
 		border: 1px solid black(.9);
 		box-shadow: 0 1px 0 white(.04);
